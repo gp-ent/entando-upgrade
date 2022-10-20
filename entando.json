@@ -1,0 +1,39 @@
+{
+    "microservices": [
+        {
+            "name": "entando-upgrade-ms",
+            "stack": "spring-boot",
+            "healthCheckPath": "/actuator/health",
+            "ingressPath": "/versions"
+        }
+    ],
+    "microfrontends": [
+        {
+            "name": "entando-upgrade-mfe",
+            "customElement": "entando-upgrade-mfe",
+            "stack": "react",
+            "type": "app-builder",
+            "slot": "content",
+            "group": "free",
+            "publicFolder": "public",
+            "paths": [
+                "/entando-upgrade-mfe"
+            ],
+            "nav": [
+                {
+                    "label": {
+                        "en": "Entando Upgrade",
+                        "it": "Entando Upgrade"
+                    },
+                    "target": "internal",
+                    "url": "/entando-upgrade-mfe"
+                }
+            ]
+        }
+    ],
+    "svc": [],
+    "name": "entando-upgrade",
+    "version": "0.0.5",
+    "description": "entando-upgrade bundle",
+    "type": "bundle"
+}
